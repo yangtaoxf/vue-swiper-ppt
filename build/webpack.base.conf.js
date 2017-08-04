@@ -27,6 +27,10 @@ module.exports = {
   },
   module: {
     rules: [
+        {
+            test: /iview.src.*?js$/,
+            loader: 'babel-loader'
+        },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
