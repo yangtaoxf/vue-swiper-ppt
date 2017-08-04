@@ -67,7 +67,7 @@
     #screenImg:fullscreen img {
         display: flex;
         justify-content: center;
-        width: 1000px;
+        width: 100%;
         height: auto;
     }
 
@@ -82,7 +82,7 @@
     #screenImg:-webkit-full-screen {
         display: flex;
         flex-direction: row;
-        position: relative;
+        /*position: relative;*/
     }
     #screenImg:-webkit-full-screen .icon{
         display: flex;
@@ -101,11 +101,13 @@
     #screenImg:-webkit-full-screen .icon-contract{
         display: block;
         position: absolute;
-        top: -15%;
-        right: 5%;
+        top: 100px;
+        right: 100px;
+        /*top: -15%;*/
+        /*right: 5%;*/
         background-color: black;
     }
-    
+
     #screenImg:-moz-full-screen {
         display: flex;
         flex-direction: row;
@@ -120,7 +122,7 @@
     #screenImg:-moz-full-screen img {
         display: flex;
         justify-content: center;
-        width: 1000px;
+        width: 100%;
         height: auto;
     }
 
