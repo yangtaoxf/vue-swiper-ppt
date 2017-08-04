@@ -82,6 +82,7 @@
     #screenImg:-webkit-full-screen {
         display: flex;
         flex-direction: row;
+        position: relative;
     }
     #screenImg:-webkit-full-screen .icon{
         display: flex;
@@ -93,19 +94,18 @@
     #screenImg:-webkit-full-screen img {
         display: flex;
         justify-content: center;
-        width: 1000px;
+        width: 100%;
         height: auto;
     }
 
     #screenImg:-webkit-full-screen .icon-contract{
         display: block;
-        position: fixed;
-        top: 100px;
-        right: 100px;
+        position: absolute;
+        top: -15%;
+        right: 5%;
         background-color: black;
     }
-
-
+    
     #screenImg:-moz-full-screen {
         display: flex;
         flex-direction: row;
@@ -147,7 +147,7 @@
                 </div>
 
                 <div v-for='(image, index) in images'>
-                    <img :src="image + '?imageslim'"  alt="" :key="index" v-show="index === mark">
+                    <img :src="image"  alt="" :key="index" v-show="index === mark">
                 </div>
 
                 <div class="icon" style="padding-left: 30px">
@@ -171,8 +171,8 @@
                 <table cellspacing="0">
                     <tr v-for="(item, index) in images" onmouseover="style.backgroundColor='#666'" onmouseout="style.backgroundColor='#555'">
                         <td style="color: #c3cbd6; padding: 0 1px 0 5px">{{index + 1}}</td>
-                        <td >
-                            <img :src="item + '?imageView2/2/w/320' " alt="" @click="changeImg(index)">
+                        <td>
+                            <img :src="item" alt="" @click="changeImg(index)">
                         </td>
                         <td>&nbsp;&nbsp;</td>
                     </tr>
