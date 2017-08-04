@@ -68,6 +68,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        max-width: 1000px;
         height: auto;
     }
 
@@ -95,6 +96,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        max-width: 1000px;
         height: auto;
     }
 
@@ -103,8 +105,6 @@
         position: absolute;
         top: 100px;
         right: 100px;
-        /*top: -15%;*/
-        /*right: 5%;*/
         background-color: black;
     }
 
@@ -123,6 +123,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        max-width: 1000px;
         height: auto;
     }
 
