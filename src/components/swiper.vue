@@ -15,6 +15,14 @@
         -webkit-user-select:none;
     }
 
+    .middle {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .mainBox img{
         width: 500px;
         height: 350px;
@@ -67,25 +75,22 @@
         bottom: 50%;
         right: 5%;
     }
+
     .mainBox:hover .icon-left {
-        display: inherit;
+        display: block;
         cursor: pointer;
     }
     .mainBox:hover .icon-right {
-        display: inherit;
+        display: block;
         cursor: pointer;
     }
+
 
     #screenImg:fullscreen {
         display: flex;
         flex-direction: row;
     }
-    #screenImg:fullscreen .icon{
-        display: flex;
-        align-items: center;
-        width: 60px;
-        background-color: black;
-    }
+
 
     #screenImg:fullscreen img {
         display: flex;
@@ -106,12 +111,7 @@
         display: flex;
         flex-direction: row;
     }
-    #screenImg:-webkit-full-screen .icon{
-        display: flex;
-        align-items: center;
-        width: 60px;
-        background-color: black;
-    }
+
 
     #screenImg:-webkit-full-screen img {
         display: flex;
@@ -132,12 +132,7 @@
         display: flex;
         flex-direction: row;
     }
-    #screenImg:-moz-full-screen .icon{
-        display: flex;
-        align-items: center;
-        width: 60px;
-        background-color: black;
-    }
+
     #screenImg:-moz-full-screen img {
         display: flex;
         justify-content: center;
@@ -162,30 +157,25 @@
                 <div class="icon-contract" @click="exitFullscreen()">
                     <a><Icon type="android-contract" style="font-size: 30px; color: #c3cbd6"></Icon></a>
                 </div>
-                <!--<div class="icon">-->
-                   <!--<a @click="changeImg(mark-1)" v-if="mark">-->
-                       <!--<Icon type="chevron-left" style="font-size: 40px; color: #c3cbd6"></Icon>-->
-                   <!--</a>-->
-                <!--</div>-->
+
                 <div class="icon-left">
                     <a @click="changeImg(mark-1)" v-if="mark">
                         <Icon type="chevron-left" style="font-size: 40px; color: #c3cbd6"></Icon>
                     </a>
                 </div>
-                <div v-for='(image, index) in images'>
-                    <img :src="image"  alt="" :key="index" v-show="index === mark">
+                <div class="middle">
+                    <div v-for='(image, index) in images'>
+                        <img :src="image"  alt="" :key="index" v-show="index === mark">
+                    </div>
                 </div>
+
                 <div class="icon-right">
                     <a @click="changeImg(mark+1)" v-if="images.length -1 - mark">
                         <Icon type="chevron-right" style="font-size: 40px; color: #c3cbd6 "></Icon>
                     </a>
                 </div>
-                <!--<div class="icon" style="padding-left: 30px">-->
-                    <!--<a @click="changeImg(mark+1)" v-if="images.length -1 - mark">-->
-                        <!--<Icon type="chevron-right" style="font-size: 40px; color: #c3cbd6 "></Icon>-->
-                    <!--</a>-->
-                <!--</div>-->
-                <img src="" alt="" v-show="this.images.length === 0">
+
+                <!--<img src="" alt="" v-show="this.images.length === 0">-->
             </div>
             <div class="bottom">
                 <span style="color: #c3cbd6;">{{mark + 1}} / {{images.length}}</span>
