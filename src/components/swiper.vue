@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .mainBox img{
         width: 500px;
         height: 350px;
