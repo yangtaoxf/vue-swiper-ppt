@@ -12,6 +12,7 @@
         flex-direction: column;
         padding: 20px;
         position: relative;
+        -webkit-user-select:none;
     }
 
     .mainBox img{
@@ -54,6 +55,27 @@
         display: none;
     }
 
+    .icon-left {
+        display: none;
+        position: absolute;
+        bottom: 50%;
+        left: 5%;
+    }
+    .icon-right {
+        display: none;
+        position: absolute;
+        bottom: 50%;
+        right: 5%;
+    }
+    .mainBox:hover .icon-left {
+        display: inherit;
+        cursor: pointer;
+    }
+    .mainBox:hover .icon-right {
+        display: inherit;
+        cursor: pointer;
+    }
+
     /*#screenImg:fullscreen {*/
         /*display: flex;*/
         /*flex-direction: row;*/
@@ -80,7 +102,6 @@
         /*right: 100px;*/
         /*background-color: black;*/
     /*}*/
-
     #screenImg:-webkit-full-screen {
         display: flex;
         flex-direction: row;
@@ -108,7 +129,6 @@
         right: 5%;
         background-color: black;
     }
-
     /*#screenImg:-moz-full-screen {*/
         /*display: flex;*/
         /*flex-direction: row;*/
@@ -119,7 +139,6 @@
         /*width: 60px;*/
         /*background-color: black;*/
     /*}*/
-
     /*#screenImg:-moz-full-screen img {*/
         /*display: flex;*/
         /*justify-content: center;*/
@@ -136,25 +155,6 @@
         /*background-color: black;*/
     /*}*/
 
-    .icon-left {
-        display: none;
-        position: absolute;
-        bottom: 50%;
-        left: 5%;
-    }
-    .icon-right {
-        display: none;
-        position: absolute;
-        bottom: 50%;
-        right: 5%;
-    }
-    .mainBox:hover .icon-left {
-        display: block;
-    }
-    .mainBox:hover .icon-right {
-        display: block;
-    }
-
 </style>
 <template>
     <div class="content">
@@ -168,7 +168,6 @@
                        <!--<Icon type="chevron-left" style="font-size: 40px; color: #c3cbd6"></Icon>-->
                    <!--</a>-->
                 <!--</div>-->
-
                 <div class="icon-left">
                     <a @click="changeImg(mark-1)" v-if="mark">
                         <Icon type="chevron-left" style="font-size: 40px; color: #c3cbd6"></Icon>
@@ -182,8 +181,6 @@
                         <Icon type="chevron-right" style="font-size: 40px; color: #c3cbd6 "></Icon>
                     </a>
                 </div>
-
-
                 <!--<div class="icon" style="padding-left: 30px">-->
                     <!--<a @click="changeImg(mark+1)" v-if="images.length -1 - mark">-->
                         <!--<Icon type="chevron-right" style="font-size: 40px; color: #c3cbd6 "></Icon>-->
@@ -191,7 +188,6 @@
                 <!--</div>-->
                 <img src="" alt="" v-show="this.images.length === 0">
             </div>
-
             <div class="bottom">
                 <span style="color: #c3cbd6;">{{mark + 1}} / {{images.length}}</span>
                 <div @click="fullScreen()">
@@ -199,7 +195,6 @@
                 </div>
             </div>
         </div>
-
         <div class="sideBox">
             <div class="sideImg">
                 <table cellspacing="0">
