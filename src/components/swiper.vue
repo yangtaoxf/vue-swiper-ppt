@@ -216,8 +216,9 @@
             // 键盘事件 图片前进与后退
             let self = this;
             document.onkeydown = function (e) {
-                let key;
-                key = window.event.keyCode;
+                e = e ? e : window.event;
+                let key = e.which ? e.which : e.keyCode;
+                // let key = window.event.keyCode;
                 if (key === 37) {
                     if (self.mark > 0) {
                         self.mark--;
