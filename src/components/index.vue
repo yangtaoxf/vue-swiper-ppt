@@ -1,4 +1,3 @@
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .container-box {
         display: flex;
@@ -27,20 +26,22 @@ export default {
         return {
         msg: 'Welcome to Vue-swiper-ppt',
         images: [
-            'http://ow5nqfa5j.bkt.clouddn.com/imgPPT3.png',
-            'http://ow5nqfa5j.bkt.clouddn.com/imgPPT5.png',
-            'http://ow5nqfa5j.bkt.clouddn.com/imgPPT4.png',
-            'http://ow5nqfa5j.bkt.clouddn.com/imgPPT2.png',
-            'http://ow5nqfa5j.bkt.clouddn.com/imgPPT1.png'
+            'http://ow5nqfa5j.bkt.clouddn.com/ppt-01.jpg',
+            'http://ow5nqfa5j.bkt.clouddn.com/ppt-02.jpg',
+            'http://ow5nqfa5j.bkt.clouddn.com/ppt-03.jpg',
+            'http://ow5nqfa5j.bkt.clouddn.com/ppt-04.jpg',
+            'http://ow5nqfa5j.bkt.clouddn.com/ppt-05.jpg'
+            // 'http://ow5nqfa5j.bkt.clouddn.com/imgPPT3.png',
+            // 'http://ow5nqfa5j.bkt.clouddn.com/imgPPT5.png',
+            // 'http://ow5nqfa5j.bkt.clouddn.com/imgPPT4.png',
+            // 'http://ow5nqfa5j.bkt.clouddn.com/imgPPT2.png',
+            // 'http://ow5nqfa5j.bkt.clouddn.com/imgPPT1.png'
         ],
     }
     },
     components: {
         Swiper
-    },
-    created() {
-
-    },
+    }
 }
 </script>
 
